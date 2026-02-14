@@ -1,0 +1,108 @@
+.timeline {
+  padding: 8rem 3rem;
+  background: var(--bg-primary);
+  position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  margin-bottom: 5rem;
+  color: var(--text-primary);
+}
+
+.timeline-container {
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--accent-soft), transparent);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 5rem;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 12px;
+  height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  border: 3px solid var(--bg-primary);
+  z-index: 10;
+}
+
+.timeline-content {
+  flex: 1;
+  padding: 2rem;
+  background: rgba(19, 23, 32, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-left: 2px solid var(--accent-soft);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: auto;
+  border-left: none;
+  border-right: 2px solid var(--accent-soft);
+}
+
+.timeline-year {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1em;
+}
+
+.timeline-event-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin-bottom: 0.75rem;
+  color: var(--text-primary);
+}
+
+.timeline-desc {
+  font-size: 1rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .timeline {
+    padding: 5rem 1.5rem;
+  }
+  
+  .timeline-line {
+    left: 1.5rem;
+  }
+  
+  .timeline-marker {
+    left: 1.5rem;
+  }
+  
+  .timeline-item {
+    padding-left: 3rem;
+  }
+  
+  .timeline-content {
+    margin-left: 0 !important;
+    border-left: 2px solid var(--accent-soft) !important;
+    border-right: none !important;
+  }
+}

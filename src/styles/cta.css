@@ -1,0 +1,58 @@
+.cta {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, var(--bg-secondary) 0%, #000 100%);
+  position: relative;
+  padding: 140px 8vw;
+}
+
+.cta::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(198, 167, 94, 0.03) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.cta-content {
+  text-align: center;
+  padding: 2rem;
+}
+
+.cta-title {
+  font-size: clamp(3rem, 5vw, 5rem);
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  letter-spacing: 2px;
+}
+
+.cta-text {
+  font-size: clamp(1rem, 1.1vw, 1.1rem);
+  color: var(--text-muted);
+  margin-bottom: 3rem;
+  font-weight: 400;
+}
+
+.cta-button {
+  height: 52px;
+  padding: 0 32px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent-gold);
+  background: transparent;
+  border: 1px solid var(--accent-gold);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  font-family: var(--font-body);
+}
+
+.cta-button:hover {
+  background: var(--accent-gold);
+  color: #000;
+  transform: scale(0.98);
+}

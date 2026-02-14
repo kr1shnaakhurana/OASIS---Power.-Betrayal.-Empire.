@@ -1,0 +1,148 @@
+.footer {
+  background: linear-gradient(to bottom, #0b0b0c 0%, #000 100%);
+  padding: 100px 8vw 60px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(198, 167, 94, 0.3), transparent);
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 80px;
+  margin-bottom: 60px;
+}
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.footer-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  letter-spacing: 3px;
+  color: var(--text-primary);
+  font-weight: 700;
+  margin: 0;
+}
+
+.footer-tagline {
+  font-size: 0.95rem;
+  color: var(--accent-gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+}
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-heading {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--text-primary);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.footer-column a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+  letter-spacing: 0.3px;
+}
+
+.footer-column a:hover {
+  color: var(--accent-gold);
+}
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+  margin-bottom: 40px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-copyright,
+.footer-legal {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.5px;
+}
+
+.footer-legal {
+  font-style: italic;
+}
+
+@media (max-width: 968px) {
+  .footer {
+    padding: 80px 6vw 50px;
+  }
+  
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: 60px 6vw 40px;
+  }
+  
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
